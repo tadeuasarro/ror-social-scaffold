@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @friendships = Friendship.to_be_confirmed.where(friend_id: current_user.id)
   end
@@ -25,6 +26,13 @@ class FriendshipsController < ApplicationController
       flash[:notice] = 'Something went wrong, please try again!'
       render 'friendships#index'
     end
+  end
+
+  def destroy
+    @friendship = Friendship.find(params[:id])
+    @friendship.destroy
+
+    redirect_to friendships_path, notice: 'Request rejected!'
   end
 
   private
