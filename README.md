@@ -17,9 +17,16 @@ Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
 
+### Clone
+
+Clone repo with
+```
+git clone https://github.com/tadeuasarro/ror-social-scaffold.git
+```
+
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -55,7 +62,7 @@ TBA
 ## Authors
 
 - Original forked project: TBA
-- Microverse student (Tadeu)[tadeuasarro.web.app]
+- Microverse student [Tadeu Sarro](tadeuasarro.web.app)
 
 ## 🤝 Contributing
 
