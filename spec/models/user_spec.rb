@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User do
-
   let(:subject) do
     described_class.new(
       name: 'example',
@@ -32,7 +31,5 @@ RSpec.describe User do
       it { is_expected.to have_many(:likes) }
       it { is_expected.to have_many(:friendships) }
     end
-
   end
-
 end
