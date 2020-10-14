@@ -29,16 +29,9 @@
         <%= link_to 'Sign in', user_session_path %>
       <% end %>
     </nav>
-    <% if notice.present? %>
-      <div class="alert-warning p-2 d-flex justify-content-center">
-        <p> <%= notice %> </p>
-      </div>
-    <% end %>
-    <% if alert.present? %>
-      <div class="alert-danger p-2 d-flex justify-content-center">
-        <p> <%= alert %> </p>
-      </div>
-    <% end %>
+
+    <%= if_notice(notice) %>
+    <%= if_alert(alert) %>
     <main class="main">
       <%= yield %>
     </main>

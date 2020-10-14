@@ -25,6 +25,8 @@ RSpec.describe Friendship do
     end
   end
 
-  it { is_expected.to belong_to(:user) }
-  it { is_expected.to belong_to(:friend) }
+  describe 'associations', type: :model do
+    it { is_expected.to belong_to(:user) }
+    it { is_expected.to belong_to(:friend) }
+  end
 end

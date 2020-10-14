@@ -6,7 +6,7 @@ RSpec.describe Comment do
   let(:subject) { described_class.new(user_id: user.id, post_id: post.id, content: 'This is a comment') }
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:content)}
+    it { is_expected.to validate_presence_of(:content) }
   end
 
   describe 'associations', type: :model do

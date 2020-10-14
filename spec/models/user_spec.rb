@@ -24,12 +24,11 @@ RSpec.describe User do
       subject.email = ''
       expect(subject).not_to be_valid
     end
-
-    describe 'Associations', type: :model do
-      it { is_expected.to have_many(:posts) }
-      it { is_expected.to have_many(:comments) }
-      it { is_expected.to have_many(:likes) }
-      it { is_expected.to have_many(:friendships) }
-    end
+  end
+  describe 'Associations', type: :model do
+    it { is_expected.to have_many(:posts) }
+    it { is_expected.to have_many(:comments) }
+    it { is_expected.to have_many(:likes) }
+    it { is_expected.to have_many(:friendships) }
   end
 end
