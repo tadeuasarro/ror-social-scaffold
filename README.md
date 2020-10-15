@@ -1,6 +1,6 @@
 # Social Media Project
 
-> First milestone for Social Media project.
+> Second milestone for Social Media project.
 
 ## Built With
 
