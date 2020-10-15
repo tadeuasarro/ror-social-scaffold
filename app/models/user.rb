@@ -12,4 +12,7 @@ class User < ApplicationRecord
 
   has_many :friendship_requests
   has_many :requests_received, class_name: 'FriendshipRequest', foreign_key: :friend_id
+
+  has_many :active_friendships
+  has_many :friendships_friend, class_name: 'FriendshipRequest', foreign_key: :friend_id
 end
