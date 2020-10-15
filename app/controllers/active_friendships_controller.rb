@@ -9,9 +9,7 @@ class ActiveFriendshipsController < ApplicationController
     )
 
     if first_active_friendship.save && second_active_friendship.save
-      if request.destroy_all
-        redirect_to friendship_requests_path, notice: 'Friend accepted!'
-      end
+      redirect_to friendship_requests_path, notice: 'Friend accepted!' if request.destroy_all
     else
       flash[:notice] = 'Something went wrong, please try again later!'
       render 'friendship_requests#index'
@@ -29,5 +27,6 @@ class ActiveFriendshipsController < ApplicationController
       user_id: first.friend_id,
       friend_id: first.user_id
     )
+    friendship
   end
 end

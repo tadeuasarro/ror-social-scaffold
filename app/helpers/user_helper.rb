@@ -8,6 +8,12 @@ module UserHelper
                  'Request sent',
                  class: 'btn-warning p-1 rounded small no-link'
                )
+             elsif get_active_friendship(user)
+               content_tag(
+                 :span,
+                 'Befriended already',
+                 class: 'btn-success p-1 rounded small no-link'
+               )
              else
                capture do
                  link_to 'Add friend',
@@ -30,5 +36,8 @@ module UserHelper
     result
   end
 
-  def get_active_friendship(user); end
+  def get_active_friendship(user)
+    result = ActiveFriendship.where(user_id: current_user.id, friend_id: user.id).first
+    result
+  end
 end
