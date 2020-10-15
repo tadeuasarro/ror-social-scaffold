@@ -1,4 +1,8 @@
 class FriendshipRequestsController < ApplicationController
+  def index
+    @friendship_requests = FriendshipRequest.where(friend_id: current_user.id)
+  end
+
   def create
     friendship_request = FriendshipRequest.new(friendship_request_params)
     if friendship_request.save
