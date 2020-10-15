@@ -9,7 +9,7 @@ class FriendshipRequestsController < ApplicationController
       redirect_to users_path, notice: 'The request has been sent!'
     else
       flash[:notice] = 'Something went wrong, please try again later!'
-      render 'users/'
+      render 'users#index'
     end
   end
 
