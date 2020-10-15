@@ -26,9 +26,4 @@ module UserHelper
     link
   end
 
-  def get_friendship(user)
-    result = Friendship.find_by(user_id: current_user.id, friend_id: user.id)
-    result = Friendship.find_by(user_id: user.id, friend_id: current_user.id) if result.nil?
-    result
-  end
 end
