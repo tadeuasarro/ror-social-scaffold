@@ -1,28 +1,15 @@
 module UserHelper
-  def new_friendship(user)
-    unless user.id == current_user.id
-      friendship = get_friendship(user)
-      link = if friendship
-               if friendship.confirmed
-                 content_tag(:small, 'Befriended already!', class: 'p-1 rounded btn-success')
-               elsif current_user.id == friendship.user_id
-                 content_tag(:small, 'Request sent!', class: 'p-1 rounded btn-warning')
-               end
-             else
-               capture do
-                 link_to 'Add friend',
-                         friendships_path(
-                           friendship: {
-                             user_id: current_user,
-                             friend_id: user,
-                             confirmed: false
-                           }
-                         ),
-                         method: 'post',
-                         class: 'p-1 rounded btn-dark small no-link'
-               end
-             end
-    end
+  def new_friendship_request(user)
+    link = capture {
+      link_to user.name,
+      friendship_requests_path(
+        friendship_request:{
+          user_id: current_user.id,
+          friend_id: user.id
+        }
+      ),
+      method: 'post'
+    }
     link
   end
 
