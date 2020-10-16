@@ -25,5 +25,4 @@ RSpec.describe 'Post features', type: :request do
     click_button 'Save'
     expect(page).to have_content('Post was successfully created.')
   end
-
 end

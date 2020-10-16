@@ -18,7 +18,5 @@ RSpec.describe 'Like features', type: :request do
     fill_in 'comment_content', with: 'This is some comment'
     click_button 'Comment'
     expect(page).to have_content('Comment was successfully created.')
-
   end
-
 end

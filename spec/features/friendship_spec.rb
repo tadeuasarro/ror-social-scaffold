@@ -76,5 +76,4 @@ RSpec.describe 'Friendship features', type: :request do
     click_link 'Reject request'
     expect(page).to have_content('Request rejected!')
   end
-
 end
