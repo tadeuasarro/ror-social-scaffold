@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   private
 
   def timeline_posts
-    result = Post.where(user: current_user.confirmed_friendships)
+    result = Post.where(user: current_user.friends)
     result += current_user.posts
     @timeline_posts ||= result.sort { |x, y| y.created_at <=> x.created_at }
   end
