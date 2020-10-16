@@ -29,6 +29,8 @@ RSpec.describe User do
     it { is_expected.to have_many(:posts) }
     it { is_expected.to have_many(:comments) }
     it { is_expected.to have_many(:likes) }
-    it { is_expected.to have_many(:friendships) }
+    it { is_expected.to have_many(:confirmed_friendships) }
+    it { is_expected.to have_many(:pending_friendships) }
+    it { is_expected.to have_many(:inverted_friendships) }
   end
 end
