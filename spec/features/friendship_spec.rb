@@ -1,25 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe 'Friendship features', type: :request do
+  before :each do
+    user1 = User.create(name: 'Tadeu', email: 'tadeu@tadeu.com', password: '123123')
+    user2 = User.create(name: 'Maria', email: 'maria@maria.com', password: '123123')
+  end
+
   scenario 'Create and accept new friendship' do
-    visit new_user_registration_path
-    fill_in 'user_name', with: 'tadeu'
-    fill_in 'user_email', with: 'tadeu@tadeu.com'
-    fill_in 'user_password', with: '123123'
-    fill_in 'user_password_confirmation', with: '123123'
-    click_button 'Sign up'
-    expect(page).to have_content('Welcome! You have signed up successfully.')
-
-    click_link 'Sign out'
-    expect(page).to have_content('You need to sign in or sign up before continuing.')
-
-    visit new_user_registration_path
-    fill_in 'user_name', with: 'maria'
+    visit new_user_session_path
     fill_in 'user_email', with: 'maria@maria.com'
     fill_in 'user_password', with: '123123'
-    fill_in 'user_password_confirmation', with: '123123'
-    click_button 'Sign up'
-    expect(page).to have_content('Welcome! You have signed up successfully.')
+    click_button 'Log in'
+    expect(page).to have_content('Signed in successfully.')
 
     visit users_path
     click_link 'Add friend'
@@ -40,24 +32,11 @@ RSpec.describe 'Friendship features', type: :request do
   end
 
   scenario 'Create and reject new friendship' do
-    visit new_user_registration_path
-    fill_in 'user_name', with: 'tadeu'
-    fill_in 'user_email', with: 'tadeu@tadeu.com'
-    fill_in 'user_password', with: '123123'
-    fill_in 'user_password_confirmation', with: '123123'
-    click_button 'Sign up'
-    expect(page).to have_content('Welcome! You have signed up successfully.')
-
-    click_link 'Sign out'
-    expect(page).to have_content('You need to sign in or sign up before continuing.')
-
-    visit new_user_registration_path
-    fill_in 'user_name', with: 'maria'
+    visit new_user_session_path
     fill_in 'user_email', with: 'maria@maria.com'
     fill_in 'user_password', with: '123123'
-    fill_in 'user_password_confirmation', with: '123123'
-    click_button 'Sign up'
-    expect(page).to have_content('Welcome! You have signed up successfully.')
+    click_button 'Log in'
+    expect(page).to have_content('Signed in successfully.')
 
     visit users_path
     click_link 'Add friend'
