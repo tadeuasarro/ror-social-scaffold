@@ -3,7 +3,13 @@
 > Deployment milestone for Social Media project, using Heroku.
 [Screenshot](/lib/assets/screenshot.png)
 
-
+## Main features
+- Create user and log in
+- Follow other users
+- Create new posts
+- See other people posts
+- Comment posts
+- Like posts
 
 ## Livedemo - Heroku
 - Check the live version [here!](https://dry-oasis-36632.herokuapp.com/users/sign_in)
