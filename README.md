@@ -73,7 +73,7 @@ TBA
 
 ## Authors
 
-- Original forked project: TBA
+- Original forked project: [TBA](https://github.com/microverseinc/ror-social-scaffold)
 - Microverse student [Tadeu Sarro](https://tadeuasarro.web.app)
 
 ## 🤝 Contributing
