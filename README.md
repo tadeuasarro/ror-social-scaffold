@@ -1,6 +1,12 @@
 # Social Media Project
 
-> Second milestone for Social Media project.
+> Deployment milestone for Social Media project, using Heroku.
+[Screenshot](/lib/assets/screenshot.png)
+
+
+
+## Livedemo - Heroku
+- Check the live version [here!](https://dry-oasis-36632.herokuapp.com/users/sign_in)
 
 ## Built With
 
