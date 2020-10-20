@@ -1,14 +1,14 @@
 class FriendshipsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @friendships = Friendship.to_be_confirmed.where(friend_id: current_user.id)
+    @friendships = current_user.inverted_friendships
   end
 
   def create
     @friendship = Friendship.new(friendship_params)
 
     if @friendship.save
-      redirect_to root_path, notice: 'Friendship request sent!'
+      redirect_to users_path, notice: 'Friendship request sent!'
     else
       flash[:notice] = 'Something went wrong!'
       render :users
@@ -17,10 +17,11 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = Friendship.find(params[:id])
+    @friendship2 = inverse_params(@friendship)
 
     @friendship.confirmed = true
 
-    if @friendship.save
+    if @friendship.save && @friendship2.save
       redirect_to friendships_path, notice: 'Friendship request accepted!'
     else
       flash[:notice] = 'Something went wrong, please try again!'
@@ -39,5 +40,10 @@ class FriendshipsController < ApplicationController
 
   def friendship_params
     params.require(:friendship).permit(:user_id, :friend_id, :confirmed)
+  end
+
+  def inverse_params(first)
+    second = Friendship.new(user_id: first.friend_id, friend_id: first.user_id, confirmed: true)
+    second
   end
 end
