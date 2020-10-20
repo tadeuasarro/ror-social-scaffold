@@ -1,7 +1,7 @@
 # Social Media Project
 
 > Deployment milestone for Social Media project, using Heroku.
-[Screenshot](/lib/assets/screenshot.png)
+![Screenshot](/lib/assets/screenshot.png)
 
 ## Main features
 - Create user and log in
