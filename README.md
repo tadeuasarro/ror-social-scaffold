@@ -67,13 +67,9 @@ Open `http://localhost:3000/` in your browser.
     bundle exec rspec
 ```
 
-### Deployment
-
-TBA
-
 ## Authors
 
-- Original forked project: [TBA](https://github.com/microverseinc/ror-social-scaffold)
+- Original forked project: [MIT](https://github.com/microverseinc/ror-social-scaffold)
 - Microverse student [Tadeu Sarro](https://tadeuasarro.web.app)
 
 ## 🤝 Contributing
@@ -88,9 +84,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+MIT
 
 ## 📝 License
 
-TBA
-
+MIT
