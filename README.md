@@ -1,6 +1,18 @@
 # Social Media Project
 
-> Second milestone for Social Media project.
+> Deployment milestone for Social Media project, using Heroku.
+![Screenshot](/lib/assets/screenshot.png)
+
+## Main features
+- Create user and log in
+- Follow other users
+- Create new posts
+- See other people posts
+- Comment posts
+- Like posts
+
+## Livedemo - Heroku
+- Check the live version [here!](https://dry-oasis-36632.herokuapp.com/users/sign_in)
 
 ## Built With
 
@@ -55,20 +67,16 @@ Open `http://localhost:3000/` in your browser.
     bundle exec rspec
 ```
 
-### Deployment
-
-TBA
-
 ## Authors
 
-- Original forked project: TBA
-- Microverse student [Tadeu Sarro](tadeuasarro.web.app)
+- Original forked project: [MIT](https://github.com/microverseinc/ror-social-scaffold)
+- Microverse student [Tadeu Sarro](https://tadeuasarro.web.app)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/tadeuasarro/ror-social-scaffold/issues).
 
 ## Show your support
 
@@ -76,9 +84,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+MIT
 
 ## 📝 License
 
-TBA
-
+MIT
